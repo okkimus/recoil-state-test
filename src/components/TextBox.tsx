@@ -1,9 +1,12 @@
 import React, { type ReactElement } from 'react';
-import { useRecoilValue } from 'recoil';
-import textState from '../recoil/textState';
+import { type RecoilValueReadOnly, useRecoilValue } from 'recoil';
 
-const TextBox = (): ReactElement => {
-  const text = useRecoilValue(textState);
+interface TextBoxProps {
+  recoilValue: RecoilValueReadOnly<string>
+}
+
+const TextBox = ({ recoilValue }: TextBoxProps): ReactElement => {
+  const text = useRecoilValue(recoilValue);
 
   return (
         <div>{ text }</div>
