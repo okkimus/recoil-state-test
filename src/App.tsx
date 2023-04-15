@@ -4,6 +4,7 @@ import TextField from './components/TextField';
 import TextBox from './components/TextBox';
 import reversedTextState from './recoil/reversedTextState';
 import oddTextIndicesState from './recoil/oddTextIndicesState';
+import capitalLetterTextState from './recoil/capitalLetterTextState';
 
 function App (): ReactElement {
   return (
@@ -11,6 +12,7 @@ function App (): ReactElement {
       <TextField />
       <TextBox recoilValue={reversedTextState} />
       <TextBox recoilValue={oddTextIndicesState} />
+      <TextBox recoilValue={capitalLetterTextState} />
     </div>
   );
 }
